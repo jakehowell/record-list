@@ -36,11 +36,11 @@
 
 .flex-row.flex-table-header .flex-column[sort="asc"]:after,
 .flex-row.flex-table-header .flex-column[sort="ASC"]:after {
-  content: '\e939'; }
+  content: '\25b2'; }
 
 .flex-row.flex-table-header .flex-column[sort="desc"]:after,
 .flex-row.flex-table-header .flex-column[sort="DESC"]:after {
-  content: '\e93a'; }
+  content: '\25bc'; }
 
 .flex-column.id {
   flex: 1 0 10%; }

@@ -728,6 +728,13 @@
 .clickable {
   cursor: pointer; }
 
+app {
+  width: 100%; }
+
+app main {
+  width: 100%;
+  max-width: 1280px; }
+
 body {
   margin: 0;
   padding: 0; }
@@ -1131,10 +1138,10 @@ label {
   color: #fff;
   font-family: 'linearicons'; }
 .flex-table .flex-row.flex-table-header .flex-column[sort="asc"]:after {
-  content: '\e939';
+  content: '\x21a5';
   /*chevron-up*/ }
 .flex-table .flex-row.flex-table-header .flex-column[sort="desc"]:after {
-  content: '\e93a';
+  content: '\x21a7';
   /*chevron-down*/ }
 .flex-table .flex-column.id {
   -ms-flex: 1 0 4%;

@@ -202,10 +202,10 @@ export class RecordListComponent implements AfterViewInit, OnInit {
 				var results = response.json();
 
 				//Send pagination data to search component
-				results.pagination ? this.resultsSource.next(results.pagination) : false;
+				//results.pagination ? this.resultsSource.next(results.pagination) : false;
 
 				//Swap out compound values
-				this.records = this.formatData(results.data);
+				this.records = this.formatData(results);
 
 				//Show table rows
 				this.loading = false;

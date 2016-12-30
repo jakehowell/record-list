@@ -1,5 +1,5 @@
-@import '../../../styles/_mixins';
-@import '../../../styles/_variables';
+@import '../styles/_mixins';
+@import '../styles/_variables';
 
 :host {
 	display: block;
@@ -45,12 +45,12 @@
 
 .flex-row.flex-table-header .flex-column[sort="asc"]:after,
 .flex-row.flex-table-header .flex-column[sort="ASC"]:after {
-	content: '\e939'; //chevron-up
+	content: '\25b2'; //chevron-up
 }
 
 .flex-row.flex-table-header .flex-column[sort="desc"]:after,
 .flex-row.flex-table-header .flex-column[sort="DESC"]:after {
-	content: '\e93a'; //chevron-down
+	content: '\25bc'; //chevron-down
 }
 
 .flex-column.id {

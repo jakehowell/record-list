@@ -22,7 +22,7 @@ import { ROUTES } from './app.routes';
 		BrowserModule,
 		HttpModule,
 		FormsModule,
-		InMemoryWebApiModule.forRoot(ApiMockDataService),
+		//InMemoryWebApiModule.forRoot(ApiMockDataService),
 		RouterModule.forRoot(ROUTES),
 		MaterialModule.forRoot()
 	],

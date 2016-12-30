@@ -84,7 +84,7 @@ __decorate([
 ], SearchPaginationComponent.prototype, "filterOn", void 0);
 __decorate([
     core_1.Input(),
-    __metadata("design:type", typeof (_a = typeof Observable_1.Observable !== "undefined" && Observable_1.Observable) === "function" && _a || Object)
+    __metadata("design:type", Observable_1.Observable)
 ], SearchPaginationComponent.prototype, "results", void 0);
 __decorate([
     core_1.Output(),
@@ -101,5 +101,4 @@ SearchPaginationComponent = __decorate([
     __metadata("design:paramtypes", [])
 ], SearchPaginationComponent);
 exports.SearchPaginationComponent = SearchPaginationComponent;
-var _a;
 //# sourceMappingURL=search-pagination.component.js.map

@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, Output, ViewEncapsulation, ViewChild, QueryList, AfterViewInit } from '@angular/core';
-import { ApiService } from '../../../services/api/api.service';
 import { Subject } from 'rxjs/Subject';
 import { Observable } from 'rxjs/Observable';
 

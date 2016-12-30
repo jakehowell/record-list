@@ -20,9 +20,6 @@ var index_1 = require("./components/index");
 var home_component_1 = require("./home/home.component");
 var record_list_component_1 = require("./record-list/record-list.component");
 var search_pagination_component_1 = require("./search-pagination/search-pagination.component");
-// Imports for loading & configuring the in-memory web api
-var angular_in_memory_web_api_1 = require("angular-in-memory-web-api");
-var api_mock_data_service_1 = require("./services/api-mock-data.service");
 var app_routes_1 = require("./app.routes");
 var AppModule = (function () {
     function AppModule() {
@@ -35,7 +32,7 @@ AppModule = __decorate([
             platform_browser_1.BrowserModule,
             http_1.HttpModule,
             forms_1.FormsModule,
-            angular_in_memory_web_api_1.InMemoryWebApiModule.forRoot(api_mock_data_service_1.ApiMockDataService),
+            //InMemoryWebApiModule.forRoot(ApiMockDataService),
             router_1.RouterModule.forRoot(app_routes_1.ROUTES),
             material_1.MaterialModule.forRoot()
         ],

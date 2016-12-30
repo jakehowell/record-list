@@ -178,6 +178,15 @@
 	cursor: pointer;
 }
 
+app {
+	width: 100%;
+}
+
+app main {
+	width: 100%;
+	max-width: 1280px;
+}
+
 body {
 	margin: 0;
 	padding: 0;
@@ -622,11 +631,11 @@ label {
 	}
 
 	.flex-row.flex-table-header .flex-column[sort="asc"]:after {
-		content: '\e939'; /*chevron-up*/
+		content: '\x21a5'; /*chevron-up*/
 	}
 
 	.flex-row.flex-table-header .flex-column[sort="desc"]:after {
-		content: '\e93a'; /*chevron-down*/
+		content: '\x21a7'; /*chevron-down*/
 	}
 
 	.flex-column.id {

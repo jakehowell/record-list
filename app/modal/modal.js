@@ -9,6 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
+var common_1 = require("@angular/common");
 var core_2 = require("@angular/core");
 var components = require("../components/index");
 var Subject_1 = require("rxjs/Subject");
@@ -78,7 +79,7 @@ var DynamicComponent = (function () {
 }());
 __decorate([
     core_1.ViewChild('dynamic', { read: core_1.ViewContainerRef }),
-    __metadata("design:type", typeof (_a = typeof core_1.ViewContainerRef !== "undefined" && core_1.ViewContainerRef) === "function" && _a || Object)
+    __metadata("design:type", core_1.ViewContainerRef)
 ], DynamicComponent.prototype, "dynamic", void 0);
 __decorate([
     core_1.Input(),
@@ -91,7 +92,8 @@ DynamicComponent = __decorate([
         entryComponents: componentsArray,
         template: "\n\t\t<div #dynamic></div>\n\t"
     }),
-    __metadata("design:paramtypes", [typeof (_b = typeof core_1.ComponentFactoryResolver !== "undefined" && core_1.ComponentFactoryResolver) === "function" && _b || Object, ModalService])
+    __metadata("design:paramtypes", [core_1.ComponentFactoryResolver,
+        ModalService])
 ], DynamicComponent);
 exports.DynamicComponent = DynamicComponent;
 var ModalComponent = (function () {
@@ -140,8 +142,30 @@ ModalComponent = __decorate([
         styleUrls: ['modal.component.css'],
         template: "\n\t\t<div class=\"stage\" *ngIf=\"active\" (modalClose)=\"close()\">\n\t\t\t<div class=\"click-capture\" (click)=\"close()\"></div>\n\t\t\t<div class=\"content-wrapper\">\n\t\t\t\t<i icon=\"cross\" (click)=\"close()\"></i>\n\t\t\t\t<div class=\"content\">\n\t\t\t\t\t<dynamic-component #dynamicContent [componentData]=\"data\"></dynamic-component>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t"
     }),
-    __metadata("design:paramtypes", [ModalService, typeof (_c = typeof core_1.ComponentFactoryResolver !== "undefined" && core_1.ComponentFactoryResolver) === "function" && _c || Object])
+    __metadata("design:paramtypes", [ModalService,
+        core_1.ComponentFactoryResolver])
 ], ModalComponent);
 exports.ModalComponent = ModalComponent;
-var _a, _b, _c;
+var ModalModule = (function () {
+    function ModalModule() {
+    }
+    ModalModule.forRoot = function () {
+        return {
+            ngModule: ModalComponent,
+            providers: [ModalService]
+        };
+    };
+    return ModalModule;
+}());
+ModalModule = __decorate([
+    core_1.NgModule({
+        providers: [ModalService],
+        imports: [common_1.CommonModule],
+        declarations: [ModalComponent, DynamicComponent],
+        bootstrap: [ModalComponent],
+        exports: [ModalComponent]
+    }),
+    __metadata("design:paramtypes", [])
+], ModalModule);
+exports.ModalModule = ModalModule;
 //# sourceMappingURL=modal.js.map

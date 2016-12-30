@@ -1,7 +1,7 @@
 import { Component, NgModule, Input, ViewChild, Output, EventEmitter, Injectable, ViewContainerRef, ReflectiveInjector, ComponentFactoryResolver, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HostListener } from '@angular/core';
-import * as components from '../../components/index';
+import * as components from '../components/index';
 import { Subject } from 'rxjs/Subject';
 
 let componentsArray: any[] = Object.values(components);

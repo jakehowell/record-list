@@ -149,9 +149,9 @@ var RecordListComponent = (function () {
             .then(function (response) {
             var results = response.json();
             //Send pagination data to search component
-            results.pagination ? _this.resultsSource.next(results.pagination) : false;
+            //results.pagination ? this.resultsSource.next(results.pagination) : false;
             //Swap out compound values
-            _this.records = _this.formatData(results.data);
+            _this.records = _this.formatData(results);
             //Show table rows
             _this.loading = false;
         })
@@ -330,8 +330,10 @@ RecordListComponent = __decorate([
         template: "\n\t\t<search-pagination #search [filterOn]=\"searchBy\" [results]=\"results\">\n\t\t\t<select [(ngModel)]=\"searchBy\">\n\t\t\t\t<option *ngFor=\"let option of searchables\" [value]=\"parseValue(option)\">{{ option.label }}</option>\n\t\t\t</select>\n\t\t</search-pagination>\n\t\t<div class=\"spinner\" *ngIf=\"loading\">\n\t\t\t<md-spinner></md-spinner>\n\t\t</div>\n\t\t<div class=\"flex-table\">\n\t\t\t<div class=\"flex-row flex-table-header\">\n\t\t\t\t<div class=\"flex-column\" *ngFor=\"let viewable of viewables\" [ngClass]=\"viewable.record\" [attr.sort]=\"sorting[viewable.record]\" (click)=\"handleSort(viewable)\">\n\t\t\t\t\t{{ viewable.label }}\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div *ngIf=\"!loading\">\n\t\t\t\t<div class=\"flex-row\" *ngFor=\"let record of records\" (click)=\"handleRecordClick(record.id)\">\n\t\t\t\t\t<div class=\"flex-column\" *ngFor=\"let item of keys(record)\" [ngClass]=\"item\" [attr.show]=\"show(item)\">\n\t\t\t\t\t\t<img *ngIf=\"record[item] && record[item].mediaType == 'image'\" [src]=\"record[item].src\">\n\t\t\t\t\t\t<span [innerHTML]=\"( record[item] && record[item].mediaType ? '' : record[item] )\"></span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\t<modal #modal></modal>\n\t",
         styleUrls: ['record-list.component.css']
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof http_1.Http !== "undefined" && http_1.Http) === "function" && _a || Object, typeof (_b = typeof core_1.ChangeDetectorRef !== "undefined" && core_1.ChangeDetectorRef) === "function" && _b || Object, typeof (_c = typeof router_1.Router !== "undefined" && router_1.Router) === "function" && _c || Object, typeof (_d = typeof modal_1.ModalService !== "undefined" && modal_1.ModalService) === "function" && _d || Object])
+    __metadata("design:paramtypes", [http_1.Http,
+        core_1.ChangeDetectorRef,
+        router_1.Router,
+        modal_1.ModalService])
 ], RecordListComponent);
 exports.RecordListComponent = RecordListComponent;
-var _a, _b, _c, _d;
 //# sourceMappingURL=record-list.component.js.map

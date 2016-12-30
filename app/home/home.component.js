@@ -14,7 +14,9 @@ var HomeComponent = (function () {
         this.searchables = [
             { record: 'username', label: 'Username' },
             { record: 'first_name', label: 'First Name' },
-            { record: 'last_name', label: 'Last Name' }
+            { record: 'last_name', label: 'Last Name' },
+            { record: 'email', label: 'Email' },
+            { record: 'phone', label: 'Phone' }
         ];
     }
     return HomeComponent;
@@ -23,7 +25,7 @@ HomeComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
         selector: 'home',
-        template: "\n\t\t<record-list [resource]=\"'app/users/'\" [searchables]=\"searchables\" [config]=\"{ route: 'edit' }\"></record-list>\n\t",
+        template: "\n\t\t<record-list [resource]=\"'http://localhost:3001/users'\" [searchables]=\"searchables\" [config]=\"{ route: 'edit' }\"></record-list>\n\t",
         styleUrls: ['home.component.css']
     }),
     __metadata("design:paramtypes", [])
