@@ -1,0 +1,36 @@
+/*
+Error: Invalid CSS after "$sc-app-primary": expected selector or at-rule, was ": md-palette($s..."
+        on line 73 of material-theme.scss
+
+68:     A400: white,
+69:     A700: white,
+70:   )
+71: )
+72: 
+73: $sc-app-primary: md-palette($sc-gray);
+74: $sc-app-accent: md-pallete($sc-red);
+75: 
+76: $sc-app-theme: md-light-theme($sc-app-primary, $sc-app-accent);
+77: 
+78: @include angular-material-theme($sc-app-theme);
+
+Backtrace:
+material-theme.scss:73
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1189:in `expected'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1125:in `expected'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:42:in `parse'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:406:in `_to_tree'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:298:in `render_with_sourcemap'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:391:in `run'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/exec/base.rb:52:in `parse'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/exec/base.rb:19:in `parse!'
+/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.22/bin/sass:13:in `<top (required)>'
+/usr/local/bin/sass:23:in `load'
+/usr/local/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"$sc-app-primary\": expected selector or at-rule, was \": md-palette($s...\"\A         on line 73 of material-theme.scss\A \A 68:     A400: white,\A 69:     A700: white,\A 70:   )\A 71: )\A 72: \A 73: $sc-app-primary: md-palette($sc-gray);\A 74: $sc-app-accent: md-pallete($sc-red);\A 75: \A 76: $sc-app-theme: md-light-theme($sc-app-primary, $sc-app-accent);\A 77: \A 78: @include angular-material-theme($sc-app-theme);"; }

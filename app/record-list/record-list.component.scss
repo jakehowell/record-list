@@ -1,0 +1,89 @@
+@import '../../../styles/_mixins';
+@import '../../../styles/_variables';
+
+:host {
+	display: block;
+	width: 100%;
+}
+
+.flex-column {
+	position: relative;
+	flex: 1 1 auto;
+	width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	padding: 0 35px 0 5px;
+}
+
+.flex-column img {
+	display: block;
+	width: auto;
+	height: 100%;
+	max-height: 20px;
+	margin: 0 auto;
+}
+
+.flex-column[show="true"]{
+	display: block;
+}
+
+.flex-column[show="false"]{
+	display: none;
+}
+
+.flex-row.flex-table-header .flex-column:after {
+	position: absolute;
+	right: 0;
+	width: 35px;
+	height: auto;
+	font-size: 20px;
+	line-height: 35px;
+	color: $white;
+	font-family: 'linearicons';
+}
+
+.flex-row.flex-table-header .flex-column[sort="asc"]:after,
+.flex-row.flex-table-header .flex-column[sort="ASC"]:after {
+	content: '\e939'; //chevron-up
+}
+
+.flex-row.flex-table-header .flex-column[sort="desc"]:after,
+.flex-row.flex-table-header .flex-column[sort="DESC"]:after {
+	content: '\e93a'; //chevron-down
+}
+
+.flex-column.id {
+	flex: 1 0 10%;
+}
+
+.flex-row {
+	width: 100%;
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+	justify-content: left;
+	font: normal 300 16px/24px $opensans;
+	color: $dark_gray;
+}
+
+.flex-row.flex-table-header {
+	background-color: $black;
+	color: $white;
+	font: normal 400 20px/35px $opensans_condensed;
+	border-bottom: 1px solid $black;
+}
+
+.flex-row:nth-child(odd):not(.flex-table-header) {
+	background-color: $extra_light_gray;
+}
+
+.flex-row:hover:not(.flex-table-header){
+	background-color: darken($extra_light_gray, 5%);
+	color: $black;
+	cursor: pointer;
+}
+
+search-pagination {
+	width: auto;
+}

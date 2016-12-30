@@ -1,0 +1,79 @@
+@import '../../node_modules/@angular/material/core/theming/all-theme';
+@import '../../node_modules/@angular/material/core/theming/theming';
+@import '../../node_modules/@angular/material/core/theming/palette';
+
+@include md-core();
+
+$sc-red: (
+  50: #ffffff,
+  100: #ffe9ea,
+  200: #feb2b5,
+  300: #fc6c71,
+  400: #fc4e54,
+  500: #fb3037,
+  600: #fa121a,
+  700: #e9050c,
+  800: #cb040b,
+  900: #ad0309,
+  A100: #ffffff,
+  A200: #ffe9ea,
+  A400: #fc4e54,
+  A700: #e9050c,
+  contrast: (
+    50: $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: $black-87-opacity,
+    400: $black-87-opacity,
+    500: white,
+    600: white,
+    700: white,
+    800: $white-87-opacity,
+    900: $white-87-opacity,
+    A100: $black-87-opacity,
+    A200: white,
+    A400: white,
+    A700: white,
+  )
+);
+
+$sc-gray: (
+  50: #f5f5f5,
+  100: #efefef,
+  200: #cccccc,
+  300: #929292,
+  400: #646464,
+  500: #646464,
+  600: #555555,
+  700: #464646,
+  800: #363636,
+  900: #222222,
+  A100: #dadada,
+  A200: #b3b3b3,
+  A400: #646464,
+  A700: #363636,
+  contrast: (
+    50: $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: $black-87-opacity,
+    400: $black-87-opacity,
+    500: white,
+    600: white,
+    700: white,
+    800: $white-87-opacity,
+    900: $white-87-opacity,
+    A100: $black-87-opacity,
+    A200: white,
+    A400: white,
+    A700: white,
+  )
+)
+
+$sc-app-primary: md-palette($sc-gray);
+$sc-app-accent: md-pallete($sc-red);
+
+$sc-app-theme: md-light-theme($sc-app-primary, $sc-app-accent);
+
+@include angular-material-theme($sc-app-theme);
+

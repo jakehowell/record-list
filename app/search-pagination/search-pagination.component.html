@@ -1,0 +1,21 @@
+<div class="form-group" flex="none">
+	<input type="text" (input)="handleInput($event)" placeholder="Search">
+	<i icon="magnifier"></i>
+</div>
+<div class="form-group search-by">
+	<ng-content select="select"></ng-content>
+</div>
+<div *ngIf="searching" class="spinner" flex="none">
+	<md-spinner></md-spinner>
+</div>
+<div flex="auto"></div>
+<div class="pages" layout="row" flex="none" *ngIf="pages.length > 1">
+	<div flex="none" class="pagination-label">Page:</div>
+	<ul class="pagination" flex="none" *ngIf="pages.length">
+		<li class="prev" *ngIf="pagination.current_page !== 1" (click)="handlePrevPage()"><i icon="chevron-left"></i></li>
+		<li *ngFor="let page of pages" [ngClass]="{'current' : pagination.current_page == page.number}">
+			<a href="javascript:;" (click)="handleGoToPage(page.number)">{{page.number}}</a>
+		</li>
+		<li class="next" *ngIf="pagination.current_page < pages.length" (click)="handleNextPage()"><i icon="chevron-right"></i></li>
+	</ul>
+</div>
